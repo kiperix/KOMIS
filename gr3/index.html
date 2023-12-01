@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPJS</title>
+</head>
+<body>
+    <div></div><br>
+    <div class="dwa"></div><br>
+   
+
+  <script src="Samochod.js"></script>
+  <script src="Komis.js"></script>
+  <script>
+    const div = document.querySelector('div');
+    
+    const auto1 = new Samochod('Opel','Astra',1500,2000,6);
+    const auto2 = new Samochod('Porsche', 'GT3Rs',700000,2022,18);
+
+
+    //komis tworzenie 
+    const komis1 = new Komis('Tuptus i Spółka');
+    //do komisu samochody 
+    komis1.dodajSamochod(auto1);
+    komis1.dodajSamochod(auto2);
+
+
+
+
+div.innerHTML = `
+<div>Marka Samochodu: ${auto1.marka}</div>
+<div>Marka Samochodu: ${auto1.model}</div>
+<div>Marka Samochodu: ${auto1.cena}zł</div>
+<div>Marka Samochodu: ${auto1.rocznik}</div>
+<div>Marka Samochodu: ${auto1.spalanie}L/100km</div>
+<div>Wiek Samochodu: ${auto1.wiek()}</div>
+<div>Koszt Jazdy: ${auto1.koszt()}zł</div>
+`;
+
+div.innerHTML += `
+<div>Marka Samochodu: ${auto2.marka}</div>
+<div>Marka Samochodu: ${auto2.model}</div>
+<div>Marka Samochodu: ${auto2.cena}zł</div>
+<div>Marka Samochodu: ${auto2.rocznik}</div>
+<div>Marka Samochodu: ${auto2.spalanie}L/100km</div>
+<div>Wiek Samochodu: ${auto2.wiek()}</div>
+<div>Koszt Jazdy: ${auto2.koszt()}zł</div>
+`;
+
+
+
+
+  </script>
+</body>
+</html>
